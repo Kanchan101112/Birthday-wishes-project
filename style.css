@@ -1,43 +1,56 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f7e7ce;
-    color: #5f4b8b;
-    text-align: center;
+  background: linear-gradient(to bottom right, #ffe6f0, #fff5e6);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #333;
+  overflow: hidden;
 }
 
 .container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #ff6347;
+.celebrate-button {
+  background-color: #ff66b2;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #ff6347;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+.celebrate-button:hover {
+  transform: scale(1.1);
+  background-color: #ff3385;
 }
 
-button:hover {
-    background-color: #ff4500;
+.photo {
+  margin-top: 20px;
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.love-note {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #d63384;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#balloons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
