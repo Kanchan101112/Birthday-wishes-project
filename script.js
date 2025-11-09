@@ -3,6 +3,7 @@ const note = document.querySelector('.love-note');
 const photo = document.querySelector('.photo');
 const canvas = document.getElementById('balloons');
 const ctx = canvas.getContext('2d');
+const music = document.getElementById('music'); // new line for music
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -45,9 +46,11 @@ function animate() {
 }
 
 button.addEventListener('click', () => {
-  alert("🎉 Time to celebrate Rahul! 🎈");
+  alert("🎉 Time to celebrate Bubuuu! 🎈");
   photo.style.display = 'block';
   note.style.display = 'block';
   for (let i = 0; i < 50; i++) balloons.push(new Balloon());
   animate();
+  music.currentTime = 0;  // start from beginning
+  music.play();           // play music when button is clicked
 });
